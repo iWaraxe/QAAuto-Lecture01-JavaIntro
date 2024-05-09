@@ -1,3 +1,5 @@
+Here's the English translation of the lecture and task condition files in Markdown format.
+
 **Lecture 1: Introduction to Java and "Hello, World!" Program**
 
 ### History of Java
@@ -33,25 +35,31 @@ Let's write a simple program to display "Hello, World!" on the screen, and get f
       IntelliJ IDEA is a software development environment for many programming languages, particularly Java, JavaScript, and Python. It is developed by JetBrains and features an intuitive interface, autocompletions, suggestions, and many more tools.
 
 2. **Write the First Program**
-   public class Main {
-   public static void main(String[] args) {
-   System.out.println("Hello, World!");
-   }
-   }
+    ```java
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+    ```
 
 3. **Compile and Run the Program in IntelliJ IDEA**
 
 4. **Explanation of the Code Compilation Process**
-    - `Main.java` is a simple text file that can be opened with a text editor.
-    - Compile the code via the command line:
-      javac Main.java
-    - After compilation, the code is translated into byte code, which the Java Virtual Machine (JVM) interprets into machine instructions.
+   - `Main.java` is a simple text file that can be opened with a text editor.
+   - Compile the code via the command line:
+     ```
+     javac Main.java
+     ```
+   - After compilation, the code is translated into bytecode, which the Java Virtual Machine (JVM) interprets into machine instructions.
 
 ### Extend the Program
 Add a few more lines to our program and analyze the difference:
+```java
 System.out.println("Hello, World!");
 System.out.print("My name is");
 System.out.print(" Igor");
+```
 
 ### Java Syntax Essentials
 - **Case Sensitivity**: Java is case-sensitive, meaning `Main` and `main` are different.
@@ -77,6 +85,7 @@ Identifiers are names used for classes, variables, and methods. All components i
 ### Reserved Keywords in Java
 Java has 50 reserved words that cannot be used as identifiers.
 
+```plaintext
 abstract    assert      boolean     break
 byte        case        catch       char
 class       const       continue    default
@@ -90,6 +99,7 @@ short       static      strictfp    super
 switch      synchronized this       throw
 throws      transient   try         void
 volatile    while
+```
 
 ### Blank Line
 Blank lines in Java only contain spaces and possibly comments. Java completely ignores lines that contain spaces and comments.
@@ -98,11 +108,13 @@ Blank lines in Java only contain spaces and possibly comments. Java completely i
 A variable is a named memory location where data of a certain type can be stored.
 
 **Examples:**
+```java
 int a, b, c;          // Declaration of three integers a, b, and c.
 int a = 10, b = 10;   // Example of initialization.
 byte b = 22;          // Initialization of a byte variable `b`.
 double pi = 3.14159;  // Declaration and assignment of pi.
 char a = 'a';         // Assigning a value of 'a' to a char variable `a`.
+```
 
 ### Data Types in Java
 There are two data types in Java:
@@ -117,65 +129,145 @@ Java supports eight primitive data types. Here is a detailed look at these eight
 - Minimum value: -128 (`-2^7`).
 - Maximum value: 127 (`2^7 - 1`).
 - Mainly used for saving space in large arrays as it is four times smaller than `int`.
-  byte a = 100;
-  byte b = -50;
-
+```java
+byte a = 100;
+byte b = -50;
+```
+```java
 System.out.println(Integer.toBinaryString(127)); // Binary representation
 System.out.println(0b1111111);
+```
 
 **Type `short`**
 - 16-bit signed integer.
 - Minimum value: -32768 (`-2^15`).
 - Maximum value: 32767 (`2^15 - 1`).
 - Primarily used for saving memory like `byte`, and is two times smaller than `int`.
-
+```java
 short s = 10000;
 short r = -20000;
+```
 
 **Type `int`**
 - 32-bit signed integer.
 - Minimum value: -2147483648 (`-2^31`).
 - Maximum value: 2147483647 (`2^31 - 1`).
 - Typically used for integers if memory isn't a concern.
-
+```java
 int a = 100000;
 int b = -200000;
+```
 
 **Type `long`**
 - 64-bit signed integer.
 - Minimum value: -9223372036854775808 (`-2^63`).
 - Maximum value: 9223372036854775807 (`2^63 - 1`).
 - Used when a wider range than `int` is needed.
-  long a = 100000L;
-  long b = -200000L;
+```java
+long a = 100000L;
+long b = -200000L;
+```
 
 **Type `float`**
 - Single-precision 32-bit IEEE 754 floating-point number.
 - Mainly used to save memory in large arrays of floating-point numbers.
 - Should not be used for precise values, e.g., currency.
-  float f1 = 234.5f;
+```java
+float f1 = 234.5f;
+```
 
 **Type `double`**
 - Double-precision 64-bit IEEE 754 floating-point number.
 - Usually used for decimal values.
 - Should not be used for precise values, e.g., currency.
-  double d1 = 123.4;
+```java
+double d1 = 123.4;
+```
 
 **Type `boolean`**
 - Represents a single bit of information.
 - Has only two possible values: `true` and `false`.
-  boolean one = true;
+```java
+boolean one = true;
+```
 
 **Type `char`**
 - 16-bit Unicode character.
 - Minimum value: `'\u0000'` (or 0).
 - Maximum value: `'\uffff'` (or 65535 inclusive).
 - Used for storing any character.
-  char letterA = 'A';
+```java
+char letterA = 'A';
+```
 
 **String Class**
 The `java.lang` package includes a class called `String`, which encapsulates data structures corresponding to a string. This class is an object representation of an immutable character array. It contains methods that allow string comparison, searching within strings, and extracting certain characters and substrings.
+```java
 String greeting = "Hello, World!";
+```
 
 **Homework:** [Task_1_Hello_World_Variables](./Task_1_Hello_World_Variables.md)
 
+---
+
+**Task 1:
+
+ "Hello, World!" Program**
+
+### First App "Hello, World!"
+1. **Create a New Project in IntelliJ IDEA**
+   - Project Name: `my-first-app`
+   - Write an application that outputs the phrase "Hello, World!" to the console.
+   - [Example](https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-application.html#write-code)
+2. **Screenshot the Code and Console Output**
+
+### Differences Between `System.out.println()` and `System.out.print()`
+1. Add TWO more lines to the same application. The first line should output "My name is", and the second line should output your name. The result should display two lines as one.
+```java
+Hello, World!
+My name is Igor
+```
+2. **Screenshot the Code and Console Output**
+
+### Variables. Data Types: `String`
+1. In the same application, declare a `String` variable named `plan` and assign it the value "I am going to learn Java." Remember to enclose the string in double quotes and end each line with a semicolon.
+2. Output the data to the console.
+
+**Expected Output:**
+```java
+Hello, World!
+My name is Igor
+I am going to learn Java
+```
+
+[Example of Variable Declaration](https://comaqa.gitbook.io/java-automation/yazyk-java.-osnovy/peremennye)
+
+**Screenshot the Code and Console Output**
+
+### Variables. Data Types: `boolean`, `byte`, `short`, `char`, `int`, `long`, `float`, `double`
+1. Declare a `boolean` variable and assign it the value `true`.
+2. Declare a `byte` variable and assign it the smallest allowed value.
+3. Declare a `char` variable and assign it the value `'a'` (within single quotes).
+4. Declare a `short` variable and assign it the maximum allowed value.
+5. Declare an `int` variable and assign it any valid value.
+6. Declare a `long` variable and assign it any valid value.
+7. Declare a `float` variable and assign it any valid value.
+8. Declare a `double` variable and assign it any valid value.
+
+**Table of Allowed Values**: [Primitive Data Types](https://comaqa.gitbook.io/java-automation/yazyk-java.-osnovy/tipy-dannykh)
+
+**Screenshot the Code (ONLY)**
+
+**Useful Article on Primitives:**
+[Primitive Data Types](https://javarush.ru/groups/posts/1382-primitivnihe-tipih-java)
+
+### Difference Between `print` and `println`
+- `print`: Prints text on the same line.
+- `println`: Prints text and moves the cursor to the next line.
+
+### Practice Code Comments
+- Comment out one of the lines using `//` at the beginning of the line.
+
+### Practice the Following Shortcuts:
+- `psvm`: Shortcut for `public static void main(String[] args)`
+- `sout`: Shortcut for `System.out.println();`
